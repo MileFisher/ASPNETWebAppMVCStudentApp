@@ -17,6 +17,10 @@ namespace ASPNETWebAppMVCStudentApp.Controllers
         // GET: Instructors
         public ActionResult Index()
         {
+            if (Session["UserID"] == null)
+            {
+                return RedirectToAction("Index", "Login");
+            }
             return View(db.Instructors.ToList());
         }
 

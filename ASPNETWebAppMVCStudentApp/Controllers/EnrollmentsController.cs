@@ -17,6 +17,10 @@ namespace ASPNETWebAppMVCStudentApp.Controllers
         // GET: Enrollments
         public ActionResult Index()
         {
+            if (Session["UserID"] == null)
+            {
+                return RedirectToAction("Index", "Login");
+            }
             var enrollments = db.Enrollments.Include(e => e.Cours).Include(e => e.Student);
             return View(enrollments.ToList());
         }

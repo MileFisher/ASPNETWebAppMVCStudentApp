@@ -18,3 +18,24 @@ select,
 textarea {
     max-width: 280px;
 }
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.btn {
+    margin-right: 5px;
+}
+
+h2 {
+    color: #343a40;
+}

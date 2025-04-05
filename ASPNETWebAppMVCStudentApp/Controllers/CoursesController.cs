@@ -17,6 +17,10 @@ namespace ASPNETWebAppMVCStudentApp.Controllers
         // GET: Courses
         public ActionResult Index()
         {
+            if (Session["UserID"] == null)
+            {
+                return RedirectToAction("Index", "Login");
+            }
             var courses = db.Courses.Include(c => c.Department);
             return View(courses.ToList());
         }
