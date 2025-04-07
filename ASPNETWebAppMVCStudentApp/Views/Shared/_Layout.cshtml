@@ -9,7 +9,6 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-
         <div class="container">
             <a class="navbar-brand" href="/">School Management</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,6 +33,9 @@
                     </li>
                     <li class="nav-item">
                         @Html.ActionLink("Enrollments", "Index", "Enrollments", null, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Course Report", "Index", "Report", null, new { @class = "nav-link" })
                     </li>
                 </ul>
             </div>
